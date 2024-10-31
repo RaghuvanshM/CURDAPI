@@ -6,9 +6,7 @@ exports.createUser = async (req, res, next) => {
     const { name, age, email, education } = req.body;
 
     // Check if all fields are provided
-    if (!name || !age || !email || !education) {
-      return res.status(400).json({ error: 'All fields are required' });
-    }
+   
 
     // Create a new user
     const user = new User({ name, age, email, education });
